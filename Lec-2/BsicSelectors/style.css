@@ -1,0 +1,39 @@
+/*Element Selecyor*/
+h1{
+    color: darkslateblue;
+    text-decoration-style: solid;
+    border-color: black ;
+    border: 4px solid;
+    border-radius: 2px;
+
+}
+/*ID Selectoe*/
+#special{
+    color: rgb(255, 166, 0);
+    text-decoration: underline;
+    
+}
+.one{
+    color: forestgreen;
+    font-size: large;
+    text-decoration: dotted;
+}
+.two{
+    color: brown;
+    font-size: larger;
+}
+
+/*Attribyte Selector*/
+input[type="text"]{
+    background-color: aqua;
+
+}
+a[href="https://www.google.com/"]{
+    color: darkolivegreen;
+    text-decoration: wavy;
+    font-style: italic;
+}
+{
+    border: strong 1px solid green ;
+    
+}
