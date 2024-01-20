@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        input[type=text] {
+            text-transform: capitalize;
+        }
+    </style>
+
+  </head>
+ 
+ 
+<body>
+    <div class="row" style="margin: 0px;">
+        <div class="col-xxl-4"></div>
+        <div class="col-12 col-xxl-4">
+            <form id="web-to-lead-form">
+                <h3>Basic Information</h3>
+                <div class="mb-3"><label class="form-label">First Name</label><input class="form-control" type="text" id="firstName" name="First Name" placeholder="First Name" required=""></div>
+                <div class="mb-3"><label class="form-label">Last Name</label><input class="form-control" type="text" id="lastName" name="Last Name" placeholder="Last Name" required=""></div>
+                <!--<div class="mb-3"><label class="form-label">Aadhaar Number</label><input class="form-control" type="text" id="aadhaarNumber" name="Aadhaar Number" placeholder="Enter 12 digit Aadhaar Number" required="" inputmode="numeric" minlength="12" maxlength="12"></div>-->
+                <div class="mb-3"><label class="form-label">Email Address</label><input class="form-control" type="email" id="emailAddress" placeholder="name@email.com" required="" name="Email Address"></div>
+                <div class="mb-3"><label class="form-label">Phone Number</label><input class="form-control" type="tel" id="phoneNumber" name="phone_number" placeholder="Enter your phone number"></div>
+                <div class="mb-3"><label class="form-label">Street Address</label><input class="form-control" type="text" id="addressStreet" name="address_street" placeholder="Enter your street address"></div>
+                <div class="mb-3"><label class="form-label">City</label><input class="form-control" type="text" id="addressCity" name="address_city" placeholder="Enter your city"></div>
+               
+
+                <div class="mb-3">
+                    <label class="form-label">State</label>
+                    <select class="form-select" id="addressState" name="address_state" placeholder="Enter your state" onchange="updateCountries()"></select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Country</label>
+                    <select class="form-select" id="addressCountry" name="address_country" required=""></select>
+                </div>
+
+
+                <div id="countryInfo" class="mb-3"></div>
+
+
+
+
+                <div class="mb-3"><label class="form-label">Postal Code</label><input class="form-control" type="text" id="addressPostalCode" name="address_postal_code" placeholder="Enter your postal code"></div>
+                <div class="mb-3"><label class="form-label">Website</label><input class="form-control" type="url" id="website" name="website" placeholder="Enter your website"></div>
+               
+               
+               
+               
+               
+
+                <div class="mb-3"><label class="form-label">Profession</label><select class="form-select" id="profession">
+                       <option value="Student" selected="">Student</option>
+                        <option value="Professional">Professional</option>
+                       <option value="Company Representative">Company Representative</option>
+                        <option value="Small Business Owner">Small Business Owner</option>
+                        <option value="None of the above">None of the above</option>
+                   </select></div>
+
+
+                   
+
+                <div class="mb-3"><label class="form-label">Job Title</label><input class="form-control" type="text" id="jobTitle" name="job_title" placeholder="Enter your job title"></div>
+                <div class="mb-3">
+                    <label class="form-label">Sector</label>
+                    <select class="form-select" id="SectorTitle" name="sectorTitle" placeholder="Enter your sector name">
+                        <option value="" selected>Select your sector</option>
+                        <option value="Advertising">Advertising</option>
+                        <option value="Aerospace">Aerospace</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Apparel & Accessories">Apparel & Accessories</option>
+                        <option value="Architecture">Architecture</option>
+                        <option value="Automotive">Automotive</option>
+                        <option value="Banking">Banking</option>
+                        <option value="Biotechnology">Biotechnology</option>
+                        <option value="Building Materials & Equipment">Building Materials & Equipment</option>
+                        <option value="Chemical">Chemical</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Consulting">Consulting</option>
+                        <option value="Computer">Computer</option>
+                        <option value="Culture">Culture</option>
+                        <option value="Creative">Creative</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Education">Education</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Electric Power">Electric Power</option>
+                        <option value="Energy">Energy</option>
+                        <option value="Entertainment & Leisure">Entertainment & Leisure</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Food & Beverage">Food & Beverage</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Hospitality">Hospitality</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Legal">Legal</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Mass Media">Mass Media</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Mining">Mining</option>
+                        <option value="Music">Music</option>
+                        <option value="Publishing">Publishing</option>
+                        <option value="Petroleum">Petroleum</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Service">Service</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Software">Software</option>
+                        <option value="Support">Support</option>
+                        <option value="Shipping">Shipping</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Telecommunications">Telecommunications</option>
+                        <option value="Television">Television</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Testing, Inspection & Certification">Testing, Inspection & Certification</option>
+                        <option value="Venture Capital">Venture Capital</option>
+                        <option value="Wholesale">Wholesale</option>
+                        <option value="Water">Water</option>
+                    </select>
+                </div>
+               
+                <div class="mb-3"><label class="form-label">Organization</label><input class="form-control" type="text" id="organization" name="organization" placeholder="Enter your organization"></div>
+                <div class="mb-3"><label class="form-label">Target Market</label><input class="form-control" type="text" id="targetMarket" name="target_market" placeholder="Enter your target market"></div>
+               
+               <!-- <div class="mb-3"><label class="form-label">Mobile Number</label><input class="form-control" type="text" id="phoneNumber" name="Mobile Number" placeholder="Enter 10 digit Mobile Number" required="" inputmode="numeric" minlength="10" maxlength="10"></div>-->
+               <!-- <h3>Address</h3>-->
+         
+               <!-- <div class="mb-3"><label class="form-label">Gender</label><select class="form-select" id="gender">-->
+               <!--         <option value="Male" selected="">Male</option>-->
+               <!--         <option value="Female">Female</option>-->
+               <!--     </select></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Religion</label><select class="form-select" id="religion">-->
+               <!--         <option value="Islam" selected="">Islam</option>-->
+               <!--         <option value="Hinduism">Hinduism</option>-->
+               <!--         <option value="Christianity">Christianity</option>-->
+               <!--         <option value="Buddhism">Buddhism</option>-->
+               <!--         <option value="Jainism">Jainism</option>-->
+               <!--     </select></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Category</label><select class="form-select" id="category" name="Category">-->
+               <!--         <option value="General">General</option>-->
+               <!--         <option value="OBC" selected="">OBC</option>-->
+               <!--         <option value="SC">SC</option>-->
+               <!--         <option value="ST">ST</option>-->
+               <!--         <option value="EWS">EWS</option>-->
+               <!--     </select></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Father Name</label><input class="form-control" type="text" id="fatherName" name="Father Name" placeholder="Enter Father Name" required=""></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Mother Name</label><input class="form-control" type="text" id="motherName" name="Mother Name" placeholder="Enter Mother Name" required=""></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Orphan</label><select class="form-select" id="orphan" name="Orphan">-->
+               <!--         <option value="Yes">Yes</option>-->
+               <!--         <option value="No" selected="">No</option>-->
+               <!--     </select></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Disabled</label><select class="form-select" id="disabled" name="Disabled">-->
+               <!--         <option value="Yes">Yes</option>-->
+               <!--         <option value="No" selected="">No</option>-->
+               <!--     </select></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Annual Family Income</label><input class="form-control" type="number" id="annualFamilyIncome" min="0" max="200000" placeholder="Eligibility Criteria < 2,00,000" required="" name="Annual Family Income"></div>-->
+               <!-- <div class="mb-3"><label class="form-label">Parents Occupation</label><input class="form-control" type="text" id="parentsOccupation" name="Parents Occupation" placeholder="Labourer / Farmer / Businessman / Doctor / Engineer" required=""></div>-->
+              <!--<div class="mb-3"><label class="form-label">Latest Academic Percentage</label><input class="form-control" type="number" id="latestAcademicPercentage" min="60" max="100" placeholder="Eligibility Criteria > 60" required="" name="Academic Percentage"></div>-->
+               <!-- <h3>Bank Account Details</h3>-->
+               <!-- <div class="mb-3"><label class="form-label"><span style="color: rgb(33, 37, 41);">Bank Account Holder</span></label><select class="form-select" id="bankAccountHolder" name="Disabled">-->
+               <!--         <option value="Self" selected="">Self</option>-->
+               <!--         <option value="Joint">Joint</option>-->
+               <!--         <option value="Father">Father</option>-->
+               <!--         <option value="Mother">Mother</option>-->
+               <!--         <option value="Relative">Relative</option>-->
+               <!--     </select></div>-->
+             
+             
+              <div class="form-group">
+                            <button name="submit" type="submit" class="btn btn-primary shadow d-block w-100">Submit</button>
+                          </div>
+            </form>
+        </div>
+        <div class="col-xxl-4"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bold-and-bright.js"></script>
+
+
+<script type="text/javascript">
+    // Update the states based on the selected country
+   
+    function updateCountries() {
+    let addressState = document.getElementById('addressState');
+    let addressCountry = document.getElementById('addressCountry');
+    let countryInfo = document.getElementById('countryInfo');
+
+    addressCountry.innerHTML = '';
+    countryInfo.innerHTML = '';
+
+    // Get the selected state
+    let selectedState = addressState.value;
+
+    const Canada_States = new Set([
+      'Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland and Labrador',
+      'Nova Scotia', 'Ontario', 'Prince Edward Island', 'Quebec', 'Saskatchewan'
+    ]);
+
+    const US_States = new Set([
+      'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+      'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
+      'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan',
+      'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma',
+      'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas',
+      'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+    ]);
+
+    let country;
+
+    if (Canada_States.has(selectedState)) {
+        country = "Canada";
+    } else {
+        country = "United States";
+    }
+
+    if (country) {
+        let option = document.createElement('option');
+            option.value = country;
+            option.text = country;
+            addressCountry.add(option);
+    }
+}
+
+
+        function addStates(states) {
+            let addressState = document.getElementById('addressState');
+
+            let option = document.createElement('option');
+            option.value = null;
+            option.text = "Enter your State";
+            option.selected = true;
+            option.disabled = true;
+            addressState.add(option);
+
+
+            states.forEach(state => {
+                option = document.createElement('option');
+                option.value = state;
+                option.text = state;
+                addressState.add(option);
+            });
+        }
+
+        // Initialize states
+        function initializeStates() {
+            let states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida',
+                'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine',
+                'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska',
+                'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio',
+                'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas',
+                'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming','Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland and Labrador', 'Nova Scotia', 'Ontario',
+                'Prince Edward Island', 'Quebec', 'Saskatchewan'];
+            let addressState = document.getElementById('addressState');
+
+            addStates(states);
+        }
+
+        // Initialize states
+        initializeStates();
+
+
+
+            let webToLeadFormElement = document.getElementById('web-to-lead-form');
+            let webToLeadFormIsSubmitted = false;
+
+    webToLeadFormElement.addEventListener('submit', event => {
+        event.preventDefault();
+  console.log("Step 1");
+ 
+ 
+
+        if (webToLeadFormIsSubmitted) {
+return;
+        }
+
+        webToLeadFormIsSubmitted = true;
+        webToLeadFormElement.submit.setAttribute('disabled', 'disabled');
+  console.log("Step 2");
+
+        let payloadData = {
+            firstName: webToLeadFormElement.firstName.value,
+            lastName: webToLeadFormElement.lastName.value,
+// aadhaarNumber: webToLeadFormElement.aadhaarNumber.value,
+            emailAddress: webToLeadFormElement.emailAddress.value,
+            phoneNumber: webToLeadFormElement.phoneNumber.value,
+            addressStreet: webToLeadFormElement.addressStreet.value,
+            addressCity: webToLeadFormElement.addressCity.value,
+            addressState: webToLeadFormElement.addressState.value,
+            addressCountry: webToLeadFormElement.addressCountry.value,
+            addressPostalCode: webToLeadFormElement.addressPostalCode.value,
+            website: webToLeadFormElement.website.value,
+            profession: webToLeadFormElement.profession.value,
+           
+            jobTitle: webToLeadFormElement.jobTitle.value,
+            SectorTitle: webToLeadFormElement.SectorTitle.value,
+            organization: webToLeadFormElement.organization.value,
+            targetMarket: webToLeadFormElement.targetMarket.value,
+           
+         
+ 
+        };
+
+        // A needed URL can be found on the Lead Capture detail view.
+        let url = 'https://crm.americanmuslimconsumer.com/api/v1/LeadCapture/0aa08601f049a178db784e30fc266aa1';
+
+        let xhr = new XMLHttpRequest();
+
+        xhr.open('POST', url, true);
+
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Accept', 'application/json');
+
+        xhr.onreadystatechange = () => {
+            if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                let containerElement = document.getElementById('web-to-lead-form-container');
+
+                containerElement.innerHTML = 'Sent';
+ 
+            }
+        };
+
+        xhr.onerror = () => {
+            webToLeadFormElement.submit.removeAttribute('disabled');
+            webToLeadFormIsSubmitted = false;
+        };
+        console.log("Sector Title:", webToLeadFormElement.SectorTitle.value);
+        //console.log("Profession Title:", webToLeadFormElement.professionTitle.value);
+
+        xhr.send(JSON.stringify(payloadData));
+ // alert("Form Submitted");
+  window.open("https://americanmuslimconsumer.com","_parent");
+    });
+</script>
+
+
+</body>
+</html>
